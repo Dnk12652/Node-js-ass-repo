@@ -7,6 +7,7 @@ function getNameFromCommandLine() {
 
 function getNameFromEnv() {
     return process.env.name
+    
     // Write your code here
 }
 
