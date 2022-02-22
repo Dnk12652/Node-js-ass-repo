@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 100vw;
+            height:100vh;
+        }
+        .details h3,.details p,.details button{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .details{
+            background-color: rgb(199, 216, 41);
+            width: 30%;
+            height:40%;
+            margin-left: 30%;
+            
+            border: 3px solid blue;
+            border-radius: 5%;
+        }
+        button{
+            margin-left: 41%;
+            margin-top:2%;
+            background-color: rgb(62, 238, 62);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="'parent">
+        <%users.map(user=>{%>
+            <div class="details">
+        <h3>Name : <%=user.name%></h3>
+        <p>Email :<%=user.email%></p>
+        </div>
+        <%})%>
+        <button><a href="/form">go to form page</a></button>
+
+    </div>
+   
+ 
+       
+    
+ 
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width:100vw;
+            height:100vh;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(209, 97, 203);
+            width: 30%;
+            height:40%;
+            margin-left: 30%;
+            margin-top: 10%;
+            border: 3px solid blue;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <form action="/user/add" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id='name' name="name" placeholder="enter your name">
+            <br>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="enter your name">
+            <br>
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </div>
+    
+</body>
+</html>
