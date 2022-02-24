@@ -1,7 +1,7 @@
 const { stdin } = require('process')
 
 function getNameFromCommandLine() {
-    return process.argv[5]
+    return process.argv[argv.length-1]
     // Write you code here, name should be taken as args in process.argv
 }
 
@@ -17,6 +17,10 @@ function getNameFromReadLine() {
         input:stdin,
         output:stdout
     })
+       readline.question("",name=>{
+        rl.close();
+    })
+}
     // Write your code here
 }
 
