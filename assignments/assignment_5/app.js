@@ -31,8 +31,8 @@ app.use("/posts", (req, res, next) =>{
     });
 });
 
-app.use("/login", loginRoutes);
-app.use("/posts", postRoutes);
+app.use("/", loginRoutes);
+app.use("/", postRoutes);
 
 
 app.listen(3000, () => console.log("server is started"));
