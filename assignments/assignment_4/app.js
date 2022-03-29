@@ -13,6 +13,7 @@ const  Schemaset= new Schema({
   email: { type: String,required: true },
   isPromoted:{type:Boolean,default:null}
 
+
 });
 
 const collections = mongoose.model('users', Schemaset);
@@ -32,7 +33,7 @@ function main(){
       res.render('form.ejs');
 
    })
-  app.post('/user/add', async (req, res) => {
+  app.post('/users/add', async (req, res) => {
     await collections.create({
       name: req.body.name,
       email: req.body.email ,
@@ -41,13 +42,14 @@ function main(){
   })
 
   ;
-  app.put('/user/:id/edit', async (req, res) => {
-    await collections.updateOne({_id:req.params.id} ,{isPromoted:true})
+  app.put('/users/:id/edit', async (req, res) => {
+    await collections.updateOne({_id:req.params.id} ,[{$set:{isPromoted:{$not:"$isPromoted"}}}])
     res.redirect("/")
    });
-   app.delete('/user/:id/delete', async (req, res) => {
+   app.delete('/users/:id', async (req, res) => {
      await collections.deleteOne({_id:req.params.id})
      res.redirect("/")
+     
      
  
    });
